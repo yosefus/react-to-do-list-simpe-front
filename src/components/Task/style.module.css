@@ -1,0 +1,57 @@
+.taskBox {
+  margin: 0.8rem 0;
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all ease-in-out 0.4s;
+  cursor: pointer;
+  font-weight: 600;
+  overflow: hidden;
+  box-shadow: 3px 7px 15px #00000050;
+  background: rgba(255, 255, 255, 0.2);
+
+  backdrop-filter: blur(10px);
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.notDone {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.done {
+  transition: all ease-in-out 0.4s;
+  color: rgba(163, 163, 163, 0.404);
+}
+
+.title {
+  overflow: hidden;
+  max-width: 80vw;
+  width: 80%;
+  max-height: 2rem;
+}
+
+.first {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.last {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .taskBox {
+    font-size: 0.9rem;
+  }
+  .icons {
+    gap: 0.5rem;
+  }
+}

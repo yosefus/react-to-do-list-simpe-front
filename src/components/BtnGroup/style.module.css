@@ -1,0 +1,25 @@
+.BtnsBox {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.BtnsBox button {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  outline: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 15px #00000050;
+}
+
+@media screen and (max-width: 480px) {
+  .BtnsBox button {
+    font-size: 0.7rem;
+  }
+}
