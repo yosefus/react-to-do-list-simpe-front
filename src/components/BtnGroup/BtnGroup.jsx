@@ -8,15 +8,15 @@ export default function BtnGroup({ deleteAllFn, updateAllFn }) {
       <motion.button
         initial={{ opacity: 0, x: -200 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ type: 'spring', duration: 1, delay: 1.4 }}
+        transition={{ type: 'spring', duration: 1, delay: 2.4 }}
         onClick={() => updateAllFn(true)}
       >
         Did It All{' '}
       </motion.button>
       <motion.button
-        initial={{ opacity: 0, y: 200 }}
+        initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ type: 'spring', duration: 1, delay: 1.2 }}
+        transition={{ type: 'spring', duration: 1, delay: 2.2 }}
         onClick={() => updateAllFn(false)}
       >
         Didn't Do Any{' '}
@@ -24,7 +24,7 @@ export default function BtnGroup({ deleteAllFn, updateAllFn }) {
       <motion.button
         initial={{ opacity: 0, x: 200 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ type: 'spring', duration: 1, delay: 1 }}
+        transition={{ type: 'spring', duration: 1, delay: 2 }}
         onClick={deleteAllFn}
       >
         Delete All{' '}

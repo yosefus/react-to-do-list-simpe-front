@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 export default function Footer() {
   return (
     <motion.footer
-      initial={{ y: 70, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
+      initial={{ x: 1500, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
       transition={{ type: 'spring', duration: 2, delay: 2 }}
       className={styles.footer}
     >
