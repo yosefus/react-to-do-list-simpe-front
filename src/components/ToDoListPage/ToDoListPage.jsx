@@ -9,6 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import PacmanLoader from 'react-spinners/PacmanLoader';
 import styles from './style.module.css';
 import 'react-toastify/dist/ReactToastify.css';
+import { motion } from 'framer-motion';
 
 function ToDoListPage() {
   const [Data, setData] = useState([]),
@@ -110,16 +111,36 @@ function ToDoListPage() {
         item={item}
         clickFn={handleClick}
         deleteFn={handleDelete}
-        key={`key${i}`}
+        key={`keyl${i}`}
       />
     ));
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delay: 0,
+        duration: 0.1,
+      },
+    },
+  };
 
   return (
     <div className={styles.wrapper}>
       <ToastContainer />
       <div className={styles.container}>
         <TaskForm formState={formState} submitFn={HandleFormSubmit} />
-        {Data.length < 1 ? <LoadingSpinner /> : <Tasks />}
+
+        {Data.length < 1 ? (
+          <LoadingSpinner />
+        ) : (
+          <motion.ul variants={container} initial="hidden" animate="show">
+            <Tasks />
+          </motion.ul>
+        )}
+
         <BtnGroup updateAllFn={updateAllFn} deleteAllFn={deleteAllFn} />
       </div>
       <Footer />
