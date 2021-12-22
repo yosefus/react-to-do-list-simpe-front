@@ -6,7 +6,7 @@ export default function BtnGroup({ deleteAllFn, updateAllFn }) {
   return (
     <div className={styles.BtnsBox}>
       <motion.button
-        initial={{ opacity: 0, x: -200 }}
+        initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ type: 'spring', duration: 1, delay: 2.4 }}
         onClick={() => updateAllFn(true)}
@@ -22,7 +22,7 @@ export default function BtnGroup({ deleteAllFn, updateAllFn }) {
         Didn't Do Any{' '}
       </motion.button>
       <motion.button
-        initial={{ opacity: 0, x: 200 }}
+        initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ type: 'spring', duration: 1, delay: 2 }}
         onClick={deleteAllFn}

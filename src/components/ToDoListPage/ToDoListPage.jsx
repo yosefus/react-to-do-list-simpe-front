@@ -66,7 +66,6 @@ function ToDoListPage() {
     try {
       await axiosFn({ _url: `/task/${item._id}`, _method: 'delete' });
     } catch (error) {
-      console.log(error);
       setData(oldData);
       toast('Sorry... we can`t delete right now');
     }
@@ -115,36 +114,26 @@ function ToDoListPage() {
       />
     ));
 
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delay: 0,
-        duration: 0.1,
-      },
-    },
-  };
-
   return (
-    <div className={styles.wrapper}>
-      <ToastContainer />
-      <div className={styles.container}>
-        <TaskForm formState={formState} submitFn={HandleFormSubmit} />
+    <>
+      <div className={styles.wrapper}>
+        <ToastContainer />
+        <div className={styles.container}>
+          <TaskForm formState={formState} submitFn={HandleFormSubmit} />
 
-        {Data.length < 1 ? (
-          <LoadingSpinner />
-        ) : (
-          <motion.ul variants={container} initial="hidden" animate="show">
-            <Tasks />
-          </motion.ul>
-        )}
+          {Data.length < 1 ? (
+            <LoadingSpinner />
+          ) : (
+            <motion.ul>
+              <Tasks />
+            </motion.ul>
+          )}
 
-        <BtnGroup updateAllFn={updateAllFn} deleteAllFn={deleteAllFn} />
+          <BtnGroup updateAllFn={updateAllFn} deleteAllFn={deleteAllFn} />
+        </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 
