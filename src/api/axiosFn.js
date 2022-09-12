@@ -8,7 +8,8 @@ axios.interceptors.response.use(null, (error) => {
 });
 
 // const baseUrl = 'http://localhost:4001/api/';
-const baseUrl = 'https://todoliist-api-yosefus.herokuapp.com/api/';
+// const baseUrl = 'https://todoliist-api-yosefus.herokuapp.com/api/';
+const baseUrl = 'https://react-to-do-list-simpe-back.vercel.app/api';
 
 const axiosFn = async ({ _method: method, _url: url, _data: dataBody }) => {
   const { data } = await axios({

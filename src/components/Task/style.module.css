@@ -12,7 +12,6 @@
   overflow: hidden;
   box-shadow: 3px 7px 15px #00000050;
   background: rgba(255, 255, 255, 0.2);
-
   backdrop-filter: blur(10px);
 }
 
@@ -51,6 +50,7 @@
   .taskBox {
     font-size: 0.9rem;
   }
+
   .icons {
     gap: 0.5rem;
   }
